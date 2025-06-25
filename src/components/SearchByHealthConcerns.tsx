@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
 	FaSearch,
@@ -18,6 +18,26 @@ const SearchByHealthConcerns = () => {
 	const [activeFilter, setActiveFilter] = useState("Lifestyle Disorder");
 	const [currentPage, setCurrentPage] = useState(0);
 	const [isFilterDropdownOpen, setIsFilterDropdownOpen] = useState(false);
+
+	// Ref for dropdown
+	const filterDropdownRef = useRef<HTMLDivElement>(null);
+
+	// Click outside handler
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				filterDropdownRef.current &&
+				!filterDropdownRef.current.contains(event.target as Node)
+			) {
+				setIsFilterDropdownOpen(false);
+			}
+		};
+
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, []);
 
 	const filters = ["Lifestyle Disorder", "Condition", "Alphabet"];
 
@@ -203,7 +223,7 @@ const SearchByHealthConcerns = () => {
 					{/* Filter Dropdown for Mobile, Horizontal layout for Desktop */}
 					<div className="flex flex-col lg:flex-row gap-4 lg:items-center">
 						{/* Mobile Dropdown */}
-						<div className="lg:hidden relative">
+						<div className="lg:hidden relative" ref={filterDropdownRef}>
 							<button
 								onClick={() => setIsFilterDropdownOpen(!isFilterDropdownOpen)}
 								className="w-full flex items-center justify-between px-4 py-3 bg-blue-100 border border-blue-200 rounded-xl text-blue-700 font-medium">

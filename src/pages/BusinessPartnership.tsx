@@ -5,25 +5,60 @@ const BusinessPartnership = () => {
 	return (
 		<div className="min-h-screen bg-gray-50">
 			{/* Hero Section */}
-			<div className="relative bg-gradient-to-r from-yellow-400 via-orange-400 to-blue-500 text-white">
-				<div className="absolute inset-0 bg-black opacity-10"></div>
-				<div className="relative max-w-7xl mx-auto px-4 py-12 sm:py-10">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-						<div>
-							<h1 className="text-4xl md:text-5xl font-bold mb-6">
-								Business Partnership
+			<div className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white overflow-hidden">
+				{/* Background Pattern */}
+				<div className="absolute inset-0">
+					<div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent"></div>
+					<div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+					<div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
+				</div>
+
+				{/* Curved bottom */}
+				<div className="absolute bottom-0 left-0 w-full">
+					<svg
+						className="w-full h-20"
+						viewBox="0 0 1200 120"
+						preserveAspectRatio="none">
+						<path
+							d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z"
+							fill="rgb(249 250 251)"
+						/>
+					</svg>
+				</div>
+
+				<div className="relative max-w-7xl mx-auto px-4 py-20">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+						<div className="space-y-6">
+							<div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium">
+								🤝 Partnership Opportunities
+							</div>
+							<h1 className="text-5xl md:text-6xl font-bold leading-tight">
+								Business
+								<span className="block text-yellow-400">Partnership</span>
 							</h1>
-							<p className="text-xl opacity-90">
+							<p className="text-xl text-blue-100 leading-relaxed max-w-lg">
 								Partner with us to bring meaningful change in healthcare and
-								expand your business horizons.
+								expand your business horizons with India's trusted diagnostic
+								network.
 							</p>
+							<div className="flex flex-col sm:flex-row gap-4">
+								<button className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-300 transition-colors shadow-lg">
+									Explore Partnerships
+								</button>
+								<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+									Learn More
+								</button>
+							</div>
 						</div>
-						<div className="hidden lg:block">
+						<div className="relative">
+							<div className="relative z-10">
 							<img
-								src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+									src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
 								alt="Business Partnership"
-								className="rounded-lg shadow-2xl w-2/3 "
+									className="rounded-2xl shadow-2xl w-full"
 							/>
+							</div>
+							<div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-orange-400/20 rounded-2xl blur-3xl"></div>
 						</div>
 					</div>
 				</div>

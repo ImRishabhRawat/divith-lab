@@ -267,44 +267,108 @@ const DownloadReport = () => {
 						</div>
 					</div>
 
-					{/* Right Side - Promotional Banner */}
-					<div className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 rounded-lg p-8 flex items-center relative overflow-hidden">
-						<div className="z-10 max-w-md">
-							<div className="bg-blue-600 text-white px-4 py-2 rounded-md inline-block mb-4">
-								<span className="text-sm font-semibold">The Best</span>
+					{/* Right Side - Report Access Info */}
+					<div className="bg-white rounded-lg border border-gray-200 p-8 shadow-sm">
+						<div className="text-center mb-8">
+							<div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+								<FaDownload className="text-3xl text-blue-600" />
 							</div>
-							<div className="bg-blue-700 text-white px-4 py-2 rounded-md inline-block mb-4">
-								<span className="text-lg font-bold">Preventive</span>
-							</div>
-							<div className="bg-red-600 text-white px-6 py-3 rounded-md mb-6">
-								<span className="text-xl font-bold">
-									Health Packages Got Even Better!
-								</span>
-							</div>
-							<div className="mb-6">
-								<h2 className="text-3xl font-bold text-blue-900 mb-2">
-									Swasth<span className="text-red-600">FIT</span> Health
-									Packages
-								</h2>
-							</div>
-							<div className="flex items-center gap-4">
-								<span className="text-lg text-gray-600 line-through">
-									₹1000
-								</span>
-								<span className="text-4xl font-bold text-blue-900">₹399</span>
-								<span className="text-lg text-gray-700">
-									HbA1c, Cholesterol & TSH
-								</span>
-							</div>
+							<h2 className="text-2xl font-bold text-gray-900 mb-2">
+								Access Your Reports
+							</h2>
+			<p className="text-gray-600">
+								Download and view your lab reports securely online
+							</p>
 						</div>
-						<div className="absolute right-0 top-0 h-full w-1/2">
-							<img
-								src="/api/placeholder/300/400"
-								alt="Healthcare professionals"
-								className="h-full w-full object-cover rounded-r-lg"
-							/>
-							<div className="absolute inset-0 flex items-center justify-center">
-								<FaShieldAlt className="text-6xl text-blue-600 opacity-40" />
+
+						<div className="space-y-6">
+							{/* Report Features */}
+							<div className="bg-gray-50 rounded-lg p-6">
+								<h3 className="text-lg font-semibold text-gray-900 mb-4">
+									What you can do:
+								</h3>
+								<ul className="space-y-3">
+									<li className="flex items-start gap-3">
+										<div className="bg-green-100 rounded-full p-1 mt-0.5">
+											<div className="w-2 h-2 bg-green-600 rounded-full"></div>
+										</div>
+										<span className="text-sm text-gray-700">
+											Download PDF reports instantly
+										</span>
+									</li>
+									<li className="flex items-start gap-3">
+										<div className="bg-green-100 rounded-full p-1 mt-0.5">
+											<div className="w-2 h-2 bg-green-600 rounded-full"></div>
+										</div>
+										<span className="text-sm text-gray-700">
+											View historical test results
+										</span>
+									</li>
+									<li className="flex items-start gap-3">
+										<div className="bg-green-100 rounded-full p-1 mt-0.5">
+											<div className="w-2 h-2 bg-green-600 rounded-full"></div>
+										</div>
+										<span className="text-sm text-gray-700">
+											Share reports with doctors
+										</span>
+									</li>
+									<li className="flex items-start gap-3">
+										<div className="bg-green-100 rounded-full p-1 mt-0.5">
+											<div className="w-2 h-2 bg-green-600 rounded-full"></div>
+										</div>
+										<span className="text-sm text-gray-700">
+											Track test progress
+										</span>
+									</li>
+								</ul>
+							</div>
+
+							{/* Security Info */}
+							<div className="bg-blue-50 rounded-lg p-6">
+								<div className="flex items-center gap-3 mb-3">
+									<FaShieldAlt className="text-2xl text-blue-600" />
+									<h3 className="text-lg font-semibold text-gray-900">
+										Secure & Private
+									</h3>
+								</div>
+								<p className="text-sm text-gray-700 mb-4">
+									Your health data is protected with industry-standard
+									encryption and security measures.
+								</p>
+								<div className="flex items-center gap-2 text-xs text-gray-600">
+									<div className="w-2 h-2 bg-green-500 rounded-full"></div>
+									<span>SSL Encrypted</span>
+									<div className="w-2 h-2 bg-green-500 rounded-full ml-2"></div>
+									<span>HIPAA Compliant</span>
+								</div>
+							</div>
+
+							{/* Help Section */}
+							<div className="border-t pt-6">
+								<h3 className="text-lg font-semibold text-gray-900 mb-3">
+									Need Help?
+								</h3>
+								<div className="space-y-2">
+									<p className="text-sm text-gray-600">
+										<strong>Forgot your Lab ID?</strong> Check your test booking
+										confirmation email or SMS.
+									</p>
+									<p className="text-sm text-gray-600">
+										<strong>Forgot your password?</strong> Use your registered
+										mobile number or email.
+									</p>
+									<p className="text-sm text-gray-600">
+										<strong>Report not ready?</strong> Most reports are
+										available within 24-48 hours.
+									</p>
+								</div>
+								<div className="mt-4 p-4 bg-yellow-50 rounded-lg">
+									<p className="text-sm text-yellow-800">
+										<strong>Customer Support:</strong> Call us at{" "}
+										<span className="font-semibold">1800-88-8888</span> for
+										assistance
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>

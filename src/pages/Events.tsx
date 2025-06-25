@@ -30,21 +30,24 @@ const Events = () => {
 			{
 				id: 1,
 				title: "1st India Autoimmune Seminar",
-				image: "/api/placeholder/300/200",
+				image:
+					"https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
 				description:
 					"Comprehensive seminar on autoimmune disorders and latest treatment approaches.",
 			},
 			{
 				id: 2,
 				title: "2nd India Autoimmune Seminar",
-				image: "/api/placeholder/300/200",
+				image:
+					"https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
 				description:
 					"Advanced discussions on autoimmune research and clinical applications.",
 			},
 			{
 				id: 3,
 				title: "3rd India Autoimmune Seminar",
-				image: "/api/placeholder/300/200",
+				image:
+					"https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
 				description:
 					"Latest developments in autoimmune diagnostics and therapeutic strategies.",
 			},
@@ -53,21 +56,24 @@ const Events = () => {
 			{
 				id: 4,
 				title: "1st India Autoimmune Workshop",
-				image: "/api/placeholder/300/200",
+				image:
+					"https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
 				description:
 					"Hands-on workshop for practical autoimmune testing techniques.",
 			},
 			{
 				id: 5,
 				title: "2nd India Autoimmune Workshop",
-				image: "/api/placeholder/300/200",
+				image:
+					"https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
 				description:
 					"Interactive workshop on advanced autoimmune diagnostic methods.",
 			},
 			{
 				id: 6,
 				title: "3rd India Autoimmune Workshop",
-				image: "/api/placeholder/300/200",
+				image:
+					"https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
 				description:
 					"Practical training on latest autoimmune testing protocols.",
 			},
@@ -76,21 +82,24 @@ const Events = () => {
 			{
 				id: 7,
 				title: "1st India Autoimmune Webinar",
-				image: "/api/placeholder/300/200",
+				image:
+					"https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
 				description:
 					"Online webinar covering autoimmune disease mechanisms and diagnosis.",
 			},
 			{
 				id: 8,
 				title: "2nd India Autoimmune Webinar",
-				image: "/api/placeholder/300/200",
+				image:
+					"https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
 				description:
 					"Virtual session on emerging trends in autoimmune research.",
 			},
 			{
 				id: 9,
 				title: "3rd India Autoimmune Webinar",
-				image: "/api/placeholder/300/200",
+				image:
+					"https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
 				description:
 					"Digital presentation on autoimmune biomarkers and clinical significance.",
 			},
@@ -99,21 +108,24 @@ const Events = () => {
 			{
 				id: 10,
 				title: "1st India Autoimmune eCME",
-				image: "/api/placeholder/300/200",
+				image:
+					"https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
 				description:
 					"Continuing medical education on autoimmune disorders for healthcare professionals.",
 			},
 			{
 				id: 11,
 				title: "2nd India Autoimmune eCME",
-				image: "/api/placeholder/300/200",
+				image:
+					"https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
 				description:
 					"Advanced eCME program on autoimmune diagnostics and patient management.",
 			},
 			{
 				id: 12,
 				title: "3rd India Autoimmune eCME",
-				image: "/api/placeholder/300/200",
+				image:
+					"https://images.unsplash.com/photo-1553484771-371a605b060b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
 				description:
 					"Comprehensive eCME course on autoimmune disease pathophysiology.",
 			},
@@ -287,25 +299,69 @@ const Events = () => {
 	return (
 		<div className="min-h-screen bg-gray-50">
 			{/* Hero Section */}
-			<div className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 relative overflow-hidden">
-				<div className="max-w-7xl mx-auto px-4 py-16 md:py-24 flex items-center justify-between">
+			<div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
+				{/* Animated Background Elements */}
+				<div className="absolute inset-0">
+					<div className="absolute top-20 left-10 w-20 h-20 bg-blue-400 rounded-full opacity-20 animate-pulse"></div>
+					<div className="absolute top-40 right-20 w-16 h-16 bg-indigo-400 rounded-full opacity-30 animate-bounce"></div>
+					<div className="absolute bottom-20 left-1/4 w-12 h-12 bg-blue-300 rounded-full opacity-25 animate-ping"></div>
+					<div className="absolute bottom-40 right-1/3 w-24 h-24 bg-indigo-300 rounded-full opacity-20 animate-pulse"></div>
+				</div>
+
+				{/* Background Pattern */}
+				<div className="absolute inset-0 opacity-10">
+					<div
+						className="absolute inset-0"
+						style={{
+							backgroundImage: `radial-gradient(circle at 25% 25%, white 2px, transparent 2px),
+										 radial-gradient(circle at 75% 75%, white 2px, transparent 2px)`,
+							backgroundSize: "50px 50px",
+						}}></div>
+				</div>
+
+				<div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24 flex items-center justify-between">
 					<div className="text-left max-w-xl">
-						<h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
+						<h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
 							Events
 						</h1>
+						<p className="text-xl text-blue-100 mb-8 leading-relaxed">
+							Join our comprehensive educational events designed to advance
+							medical knowledge and enhance patient care
+						</p>
+						<div className="flex flex-wrap gap-4">
+							<button className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+								View All Events
+							</button>
+							<button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300">
+								Register Now
+							</button>
+						</div>
 					</div>
 					<div className="hidden md:block">
 						<div className="relative">
 							<img
-								src="/api/placeholder/500/300"
+								src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300&q=80"
 								alt="Conference audience"
-								className="rounded-lg shadow-lg"
+								className="rounded-lg shadow-2xl"
 							/>
-							<div className="absolute inset-0 flex items-center justify-center">
-								<FaCalendarAlt className="text-6xl text-blue-600 opacity-80" />
+							<div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent rounded-lg flex items-center justify-center">
+								<FaCalendarAlt className="text-6xl text-white opacity-80" />
 							</div>
 						</div>
 					</div>
+				</div>
+
+				{/* Curved Bottom Transition */}
+				<div className="absolute bottom-0 left-0 right-0">
+					<svg
+						viewBox="0 0 1440 120"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+							fill="#f9fafb"
+						/>
+					</svg>
 				</div>
 			</div>
 

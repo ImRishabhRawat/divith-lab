@@ -4,31 +4,77 @@ import Breadcrumb from "../components/Breadcrumb";
 const About = () => {
 	return (
 		<div className="min-h-screen bg-gray-50">
-			{/* Hero Section with curved design */}
-			<div className="relative bg-gradient-to-r from-yellow-400 via-orange-400 to-blue-600 text-white overflow-hidden">
+			{/* Hero Section with enhanced design */}
+			<div className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white overflow-hidden">
+				{/* Background Pattern */}
 				<div className="absolute inset-0">
-					{/* Curved shape */}
+					<div className="absolute inset-0 opacity-5">
+						<div className="absolute top-12 left-12 w-2 h-2 bg-white rounded-full"></div>
+						<div className="absolute top-24 right-16 w-2 h-2 bg-white rounded-full"></div>
+						<div className="absolute bottom-16 left-20 w-2 h-2 bg-white rounded-full"></div>
+						<div className="absolute bottom-12 right-12 w-2 h-2 bg-white rounded-full"></div>
+						<div className="absolute top-1/3 left-1/4 w-2 h-2 bg-white rounded-full"></div>
+						<div className="absolute top-2/3 right-1/3 w-2 h-2 bg-white rounded-full"></div>
+						<div className="absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full"></div>
+						<div className="absolute top-1/4 right-1/2 w-2 h-2 bg-white rounded-full"></div>
+					</div>
+					<div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+					<div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
+				</div>
+
+				{/* Curved bottom */}
+				<div className="absolute bottom-0 left-0 w-full">
 					<svg
-						className="absolute bottom-0 left-0 w-full h-32"
+						className="w-full h-24"
 						viewBox="0 0 1200 120"
 						preserveAspectRatio="none">
 						<path
 							d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z"
-							fill="white"
+							fill="rgb(249 250 251)"
 						/>
 					</svg>
 				</div>
-				<div className="relative max-w-7xl mx-auto px-4 py-16">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-						<div>
-							<h1 className="text-5xl font-bold mb-4">About Us</h1>
+
+				<div className="relative max-w-7xl mx-auto px-4 py-24">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+						<div className="space-y-6">
+							<div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium">
+								🏥 Healthcare Excellence Since 1947
+							</div>
+							<h1 className="text-6xl font-bold leading-tight">
+								About
+								<span className="block text-yellow-400">DIVITH LABS</span>
+							</h1>
+							<p className="text-xl text-blue-100 leading-relaxed max-w-lg">
+								Pioneering diagnostic excellence with cutting-edge technology
+								and compassionate care for over 75 years.
+							</p>
+							<div className="grid grid-cols-3 gap-6 pt-6">
+								<div className="text-center">
+									<div className="text-3xl font-bold text-yellow-400">75+</div>
+									<div className="text-sm text-blue-200">Years Legacy</div>
+								</div>
+								<div className="text-center">
+									<div className="text-3xl font-bold text-yellow-400">
+										4000+
+									</div>
+									<div className="text-sm text-blue-200">Tests Available</div>
+								</div>
+								<div className="text-center">
+									<div className="text-3xl font-bold text-yellow-400">200+</div>
+									<div className="text-sm text-blue-200">Locations</div>
+								</div>
+							</div>
 						</div>
-						<div className="flex justify-end">
-							<img
-								src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-								alt="Healthcare Professional"
-								className="w-80 h-64 object-cover rounded-lg"
-							/>
+						<div className="relative">
+							<div className="relative z-10">
+								<img
+									src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
+									alt="Healthcare Professional"
+									className="rounded-2xl shadow-2xl w-full"
+								/>
+							</div>
+							<div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-orange-400/20 rounded-2xl blur-3xl"></div>
 						</div>
 					</div>
 				</div>
@@ -113,9 +159,9 @@ const About = () => {
 						<div className="relative">
 							<div className="bg-white bg-opacity-20 rounded-full p-8 max-w-md mx-auto">
 								<img
-									src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+									src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80"
 									alt="Healthcare Journey"
-									className="rounded-full w-full"
+									className="rounded-full w-full h-full object-cover"
 								/>
 							</div>
 						</div>

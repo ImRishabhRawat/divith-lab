@@ -169,19 +169,86 @@ const Investors = () => {
 	return (
 		<div className="min-h-screen bg-gray-50">
 			{/* Hero Section */}
-			<div className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 relative overflow-hidden">
-				<div className="max-w-7xl mx-auto px-4 py-16 md:py-24 flex items-center justify-between">
-					<div className="text-left max-w-xl">
-						<h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-							Investors
-						</h1>
+			<div className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white overflow-hidden">
+				{/* Background Pattern */}
+				<div className="absolute inset-0">
+					<div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent"></div>
+					<div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+					<div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
+					<div className="absolute inset-0 opacity-10">
+						<div className="absolute top-16 left-16 w-3 h-3 bg-white transform rotate-45"></div>
+						<div className="absolute top-32 right-24 w-2 h-2 bg-white transform rotate-45"></div>
+						<div className="absolute bottom-24 left-32 w-4 h-4 bg-white transform rotate-45"></div>
+						<div className="absolute bottom-16 right-16 w-2 h-2 bg-white transform rotate-45"></div>
+						<div className="absolute top-1/2 left-1/3 w-3 h-3 bg-white transform rotate-45"></div>
+						<div className="absolute top-1/4 right-1/4 w-2 h-2 bg-white transform rotate-45"></div>
+						<div className="absolute top-3/4 left-1/2 w-3 h-3 bg-white transform rotate-45"></div>
 					</div>
-					<div className="hidden md:block">
-						<img
-							src="/api/placeholder/500/300"
-							alt="Business analytics and investment"
-							className="rounded-lg shadow-lg"
+				</div>
+
+				{/* Curved bottom */}
+				<div className="absolute bottom-0 left-0 w-full">
+					<svg
+						className="w-full h-20"
+						viewBox="0 0 1200 120"
+						preserveAspectRatio="none">
+						<path
+							d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z"
+							fill="rgb(249 250 251)"
 						/>
+					</svg>
+				</div>
+
+				<div className="relative max-w-7xl mx-auto px-4 py-24">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+						<div className="space-y-6">
+							<div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium">
+								📈 Investment Opportunities
+							</div>
+							<h1 className="text-6xl font-bold leading-tight">
+								Investor
+								<span className="block text-yellow-400">Relations</span>
+							</h1>
+							<p className="text-xl text-blue-100 leading-relaxed max-w-lg">
+								Discover growth opportunities with India's leading diagnostic
+								healthcare company. Strong fundamentals, consistent growth, and
+								expanding market presence.
+							</p>
+							<div className="grid grid-cols-3 gap-6 pt-6">
+								<div className="text-center">
+									<div className="text-3xl font-bold text-yellow-400">25%</div>
+									<div className="text-sm text-blue-200">YoY Growth</div>
+								</div>
+								<div className="text-center">
+									<div className="text-3xl font-bold text-yellow-400">
+										₹500Cr
+									</div>
+									<div className="text-sm text-blue-200">Revenue</div>
+								</div>
+								<div className="text-center">
+									<div className="text-3xl font-bold text-yellow-400">200+</div>
+									<div className="text-sm text-blue-200">Centers</div>
+								</div>
+							</div>
+							<div className="flex flex-col sm:flex-row gap-4">
+								<button className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-300 transition-colors shadow-lg">
+									View Financials
+								</button>
+								<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+									Download Reports
+								</button>
+							</div>
+						</div>
+						<div className="relative">
+							<div className="relative z-10">
+								<img
+									src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
+									alt="Business analytics and investment"
+									className="rounded-2xl shadow-2xl w-full"
+								/>
+							</div>
+							<div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-orange-400/20 rounded-2xl blur-3xl"></div>
+						</div>
 					</div>
 				</div>
 			</div>

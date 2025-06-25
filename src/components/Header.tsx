@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import {
 	FaPhone,
@@ -38,6 +38,12 @@ const Header = () => {
 	const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
 	const [currentLocation, setCurrentLocation] = useState("Delhi");
 
+	// Refs for dropdown menus
+	const locationDropdownRef = useRef<HTMLDivElement>(null);
+	const userMenuRef = useRef<HTMLDivElement>(null);
+	const servicesMenuRef = useRef<HTMLDivElement>(null);
+	const mobileServicesMenuRef = useRef<HTMLDivElement>(null);
+
 	// Update location from URL params
 	useEffect(() => {
 		const locationParam = searchParams.get("location");
@@ -47,6 +53,41 @@ const Header = () => {
 			);
 		}
 	}, [searchParams]);
+
+	// Click outside handler
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				locationDropdownRef.current &&
+				!locationDropdownRef.current.contains(event.target as Node)
+			) {
+				setIsLocationOpen(false);
+			}
+			if (
+				userMenuRef.current &&
+				!userMenuRef.current.contains(event.target as Node)
+			) {
+				setIsUserMenuOpen(false);
+			}
+			if (
+				servicesMenuRef.current &&
+				!servicesMenuRef.current.contains(event.target as Node)
+			) {
+				setIsServicesMenuOpen(false);
+			}
+			if (
+				mobileServicesMenuRef.current &&
+				!mobileServicesMenuRef.current.contains(event.target as Node)
+			) {
+				setIsServicesMenuOpen(false);
+			}
+		};
+
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, []);
 
 	// Helper function to get current path with new location
 	const getLocationLink = (newLocation: string) => {
@@ -137,7 +178,7 @@ const Header = () => {
 						{/* Right Side Controls */}
 						<div className="flex items-center space-x-4">
 							{/* Location Dropdown */}
-							<div className="relative">
+							<div className="relative" ref={locationDropdownRef}>
 								<button
 									onClick={() => setIsLocationOpen(!isLocationOpen)}
 									className="flex items-center gap-2 bg-orange-400 text-blue-900 px-4 py-2 rounded-full font-semibold hover:bg-orange-500 transition-colors">
@@ -177,7 +218,7 @@ const Header = () => {
 							</div>
 
 							{/* User Menu */}
-							<div className="relative">
+							<div className="relative" ref={userMenuRef}>
 								<button
 									onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
 									className="flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition-colors">
@@ -206,7 +247,8 @@ const Header = () => {
 										</button>
 										<Link
 											to="/profile"
-											className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+											className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+											onClick={() => setIsUserMenuOpen(false)}>
 											My Profile
 										</Link>
 									</div>
@@ -242,7 +284,7 @@ const Header = () => {
 							</div>
 
 							{/* Services Menu Button */}
-							<div className="relative">
+							<div className="relative" ref={servicesMenuRef}>
 								<button
 									onClick={() => setIsServicesMenuOpen(!isServicesMenuOpen)}
 									className="flex flex-col gap-1 p-2 hover:bg-gray-100 rounded-md transition-colors"
@@ -258,63 +300,72 @@ const Header = () => {
 										{/* Main Services */}
 										<Link
 											to="/book-test"
-											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+											onClick={() => setIsServicesMenuOpen(false)}>
 											<FaStethoscope className="text-lg text-blue-600" />
 											<span>Book a Test</span>
 										</Link>
 
 										<Link
 											to="/nearest-center"
-											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+											onClick={() => setIsServicesMenuOpen(false)}>
 											<FaMapMarkerAlt className="text-lg text-orange-500" />
 											<span>Nearest Center</span>
 										</Link>
 
 										<Link
 											to="/upload-prescription"
-											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+											onClick={() => setIsServicesMenuOpen(false)}>
 											<FaClipboardList className="text-lg text-green-600" />
 											<span>Upload Prescription</span>
 										</Link>
 
 										<Link
 											to="/download-report"
-											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+											onClick={() => setIsServicesMenuOpen(false)}>
 											<FaDownload className="text-lg text-purple-600" />
 											<span>Download Report</span>
 										</Link>
 
 										<Link
 											to="/subsidiaries"
-											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+											onClick={() => setIsServicesMenuOpen(false)}>
 											<FaBuilding className="text-lg text-gray-600" />
 											<span>Our Subsidiaries</span>
 										</Link>
 
 										<Link
 											to="/promotions"
-											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+											onClick={() => setIsServicesMenuOpen(false)}>
 											<FaGift className="text-lg text-red-500" />
 											<span>Promotions & Discounts</span>
 										</Link>
 
 										<Link
 											to="/special-programs"
-											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+											onClick={() => setIsServicesMenuOpen(false)}>
 											<FaStar className="text-lg text-yellow-500" />
 											<span>Special Programs</span>
 										</Link>
 
 										<Link
 											to="/labs"
-											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+											onClick={() => setIsServicesMenuOpen(false)}>
 											<FaFlask className="text-lg text-teal-600" />
 											<span>Our Labs</span>
 										</Link>
 
 										<Link
 											to="/events"
-											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+											className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+											onClick={() => setIsServicesMenuOpen(false)}>
 											<FaCalendarAlt className="text-lg text-indigo-600" />
 											<span>Events</span>
 										</Link>
@@ -342,7 +393,7 @@ const Header = () => {
 						</Link>
 
 						{/* Mobile Location */}
-						<div className="relative">
+						<div className="relative" ref={locationDropdownRef}>
 							<button
 								onClick={() => setIsLocationOpen(!isLocationOpen)}
 								className="flex items-center gap-2 bg-blue-600 text-white px-3 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors">
@@ -547,20 +598,6 @@ const Header = () => {
 					</div>
 				)}
 			</div>
-
-			{/* Mobile Menu Overlay */}
-			{isServicesMenuOpen && (
-				<div
-					className="fixed inset-0  z-40 md:hidden"
-					onClick={() => setIsServicesMenuOpen(false)}></div>
-			)}
-
-			{/* Desktop Services Menu Overlay */}
-			{isServicesMenuOpen && (
-				<div
-					className="fixed inset-0z-20 hidden md:block"
-					onClick={() => setIsServicesMenuOpen(false)}></div>
-			)}
 
 			{/* Login Modal */}
 			<LoginModal

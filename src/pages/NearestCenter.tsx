@@ -69,7 +69,8 @@ const NearestCenter = () => {
 				"Paytm",
 				"PayU",
 			],
-			image: "/api/placeholder/400/250",
+			image:
+				"https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80",
 		},
 		{
 			id: 2,
@@ -102,7 +103,8 @@ const NearestCenter = () => {
 				"Paytm",
 				"PayU",
 			],
-			image: "/api/placeholder/400/250",
+			image:
+				"https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80",
 		},
 		{
 			id: 3,
@@ -134,7 +136,8 @@ const NearestCenter = () => {
 				"Paytm",
 				"PayU",
 			],
-			image: "/api/placeholder/400/250",
+			image:
+				"https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80",
 		},
 		{
 			id: 4,
@@ -166,7 +169,8 @@ const NearestCenter = () => {
 				"Paytm",
 				"PayU",
 			],
-			image: "/api/placeholder/400/250",
+			image:
+				"https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80",
 		},
 	];
 
@@ -357,23 +361,23 @@ const NearestCenter = () => {
 					{/* Left Panel - Search and Lab List */}
 					<div className="lg:col-span-1">
 						{/* Search Bar */}
-						<div className="bg-blue-600 p-4 rounded-t-lg">
+						<div className="bg-white p-4 rounded-t-lg border border-gray-200">
 							<div className="relative">
 								<input
 									type="text"
 									placeholder="Search for a Lab"
 									value={searchQuery}
 									onChange={(e) => setSearchQuery(e.target.value)}
-									className="w-full px-4 py-3 pr-12 rounded-md border-0 focus:ring-2 focus:ring-blue-300"
+									className="w-full px-4 py-3 pr-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
 								/>
-								<button className="absolute right-3 top-3 text-gray-400 hover:text-gray-600">
+								<button className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-600 transition-colors">
 									<FaSearch />
 								</button>
 							</div>
 						</div>
 
 						{/* Lab List */}
-						<div className="bg-white border border-t-0 rounded-b-lg max-h-96 overflow-y-auto">
+						<div className="bg-white border border-t-0 border-gray-200 rounded-b-lg max-h-96 overflow-y-auto">
 							{filteredLabs.map((lab) => (
 								<div
 									key={lab.id}
@@ -590,7 +594,7 @@ const NearestCenter = () => {
 								<h3 className="text-lg font-semibold text-gray-900 mb-2">
 									Select a Lab
 								</h3>
-			<p className="text-gray-600">
+								<p className="text-gray-600">
 									Choose a lab from the list to view detailed information.
 								</p>
 							</div>
