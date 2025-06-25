@@ -96,7 +96,7 @@ const Header = () => {
 	};
 
 	return (
-		<header className="w-full sticky top-0 z-50">
+		<header className="w-full top-0 z-50">
 			{/* Desktop Header */}
 			<div className="hidden lg:block">
 				{/* Top Contact Bar */}
@@ -105,8 +105,8 @@ const Header = () => {
 						{/* Logo */}
 						<Link
 							to="/"
-							className="bg-orange-400 px-4 py-2 rounded-md hover:bg-orange-500 transition-colors">
-							<h1 className="text-blue-900 font-bold text-lg flex items-center gap-2">
+							className="px-4 py-2 rounded-md transition-colors">
+							<h1 className="text-white font-bold text-lg flex items-center gap-2">
 								<FaFlask className="text-xl" />
 								DIVITH LABS
 							</h1>
@@ -181,7 +181,7 @@ const Header = () => {
 							<div className="relative" ref={locationDropdownRef}>
 								<button
 									onClick={() => setIsLocationOpen(!isLocationOpen)}
-									className="flex items-center gap-2 bg-orange-400 text-blue-900 px-4 py-2 rounded-full font-semibold hover:bg-orange-500 transition-colors">
+									className="flex items-center gap-2 border text-blue-900 px-4 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-colors">
 									<FaMapMarkerAlt className="text-sm" />
 									<span>{currentLocation}</span>
 									<span className="text-xs">▼</span>
@@ -385,8 +385,8 @@ const Header = () => {
 						{/* Mobile Logo */}
 						<Link
 							to="/"
-							className="bg-orange-400 px-3 py-2 rounded-lg hover:bg-orange-500 transition-colors">
-							<h1 className="text-blue-900 font-bold text-base flex items-center gap-2">
+							className="bg-blue-900 px-3 py-2 rounded-lg hover:bg-blue-800 transition-colors">
+							<h1 className="text-white font-bold text-base flex items-center gap-2">
 								<FaFlask className="text-lg" />
 								DIVITH LABS
 							</h1>

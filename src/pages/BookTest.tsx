@@ -259,7 +259,7 @@ const BookTest = () => {
 	return (
 		<div className="min-h-screen bg-gray-50">
 			{/* Breadcrumb */}
-			<div className="bg-white border-b shadow-sm">
+			{/* <div className="bg-white border-b shadow-sm">
 				<div className="max-w-7xl mx-auto px-4 py-4">
 					<nav className="flex items-center space-x-2 text-sm">
 						<Link
@@ -281,7 +281,7 @@ const BookTest = () => {
 						</span>
 					</nav>
 				</div>
-			</div>
+			</div> */}
 
 			{/* Results Summary & Toggle */}
 			<div className="bg-white border-b shadow-sm">

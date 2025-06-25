@@ -185,7 +185,7 @@ const DownloadReport = () => {
 	return (
 		<div className="min-h-screen bg-gray-50">
 			{/* Breadcrumb */}
-			<div className="bg-white border-b">
+			{/* <div className="bg-white border-b">
 				<div className="max-w-7xl mx-auto px-4 py-3">
 					<nav className="text-sm text-gray-600">
 						<Link to="/" className="hover:text-blue-600 transition-colors">
@@ -196,7 +196,7 @@ const DownloadReport = () => {
 						<span className="text-blue-600 font-medium">Download Report</span>
 					</nav>
 				</div>
-			</div>
+			</div> */}
 
 			{/* Main Content */}
 			<div className="max-w-7xl mx-auto px-4 py-8">
