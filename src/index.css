@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Custom scrollbar styles for modals */
+.modal-scrollbar::-webkit-scrollbar {
+	width: 6px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 10px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb {
+	background: #000000;
+	border-radius: 10px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #333333;
+}
+
+/* Firefox scrollbar */
+.modal-scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: #000000 #f1f1f1;
+}
