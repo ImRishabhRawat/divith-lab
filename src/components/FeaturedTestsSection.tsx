@@ -66,11 +66,11 @@ const FeaturedTestsSection = () => {
 			: healthPackages.filter((pkg) => pkg.category === activeFilter);
 
 	return (
-		<section className="py-16 bg-gray-50">
+		<section className="py-8 bg-gray-50">
 			<div className="max-w-7xl mx-auto px-4">
 				{/* Section Header */}
-				<div className="mb-12">
-					<h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+				<div className="mb-8">
+					<h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
 						Featured Health
 						<br />
 						Check-up Packages
@@ -79,13 +79,13 @@ const FeaturedTestsSection = () => {
 					{/* Filter Tabs - Scrollable */}
 					<div className="overflow-x-auto">
 						<div
-							className="flex gap-3 min-w-max pb-2"
+							className="flex gap-2 min-w-max pb-2"
 							style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
 							{filters.map((filter) => (
 								<button
 									key={filter}
 									onClick={() => setActiveFilter(filter)}
-									className={`px-6 py-3 rounded-full font-medium transition-all whitespace-nowrap ${
+									className={`px-4 py-2 rounded-full font-medium transition-all whitespace-nowrap text-sm ${
 										activeFilter === filter
 											? "bg-gray-900 text-white"
 											: "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
@@ -98,43 +98,43 @@ const FeaturedTestsSection = () => {
 				</div>
 
 				{/* Health Packages Grid */}
-				<div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+				<div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
 					{filteredPackages.map((pkg) => (
 						<div
 							key={pkg.id}
-							className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col h-full min-h-[320px] border border-transparent hover:border-blue-500 hover:bg-blue-50 hover:scale-105 hover:-translate-y-2 transform cursor-pointer">
+							className="bg-white rounded-xl p-4 shadow-sm hover:shadow-lg transition-all duration-300 relative flex flex-col min-h-[260px] border border-transparent hover:border-blue-500 hover:bg-blue-50 cursor-pointer">
 							{/* Discount Badge */}
 							{pkg.discount && (
-								<div className="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">
+								<div className="absolute top-3 right-3 bg-yellow-400 text-gray-900 px-2 py-1 rounded-full text-xs font-bold">
 									{pkg.discount}
 								</div>
 							)}
 
 							{/* Package Icon */}
-							<div className="text-4xl mb-4">{pkg.icon}</div>
+							<div className="text-3xl mb-3">{pkg.icon}</div>
 
 							{/* Package Details */}
-							<div className="mb-4 flex-grow">
-								<h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">
+							<div className="mb-3 flex-grow">
+								<h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight">
 									{pkg.name}
 								</h3>
-								<p className="text-sm text-gray-600">
+								<p className="text-xs text-gray-600">
 									Includes {pkg.tests} Tests
 								</p>
 							</div>
 
 							{/* Pricing */}
-							<div className="flex items-center gap-2 mb-4">
-								<span className="text-2xl font-bold text-gray-900">
+							<div className="flex items-center gap-2 mb-3">
+								<span className="text-lg font-bold text-gray-900">
 									${pkg.price.toFixed(2)}
 								</span>
-								<span className="text-sm text-gray-500 line-through">
+								<span className="text-xs text-gray-500 line-through">
 									${pkg.originalPrice.toFixed(2)}
 								</span>
 							</div>
 
 							{/* Book Now Button */}
-							<button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-xl font-medium transition-colors">
+							<button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded-lg font-medium transition-colors text-sm">
 								Book Now
 							</button>
 						</div>
@@ -142,10 +142,10 @@ const FeaturedTestsSection = () => {
 				</div>
 
 				{/* Show All Button */}
-				<div className="text-center mt-12">
+				<div className="text-center mt-8">
 					<Link
 						to="/all-packages"
-						className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium">
+						className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium text-sm">
 						View All Packages
 						<svg
 							className="w-4 h-4"

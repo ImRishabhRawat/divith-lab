@@ -1,92 +1,23 @@
-import React from "react";
 import Breadcrumb from "../components/Breadcrumb";
 
 const About = () => {
 	return (
 		<div className="min-h-screen bg-gray-50">
-			{/* Hero Section with enhanced design */}
-			<div className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white overflow-hidden">
-				{/* Background Pattern */}
-				<div className="absolute inset-0">
-					<div className="absolute inset-0 opacity-5">
-						<div className="absolute top-12 left-12 w-2 h-2 bg-white rounded-full"></div>
-						<div className="absolute top-24 right-16 w-2 h-2 bg-white rounded-full"></div>
-						<div className="absolute bottom-16 left-20 w-2 h-2 bg-white rounded-full"></div>
-						<div className="absolute bottom-12 right-12 w-2 h-2 bg-white rounded-full"></div>
-						<div className="absolute top-1/3 left-1/4 w-2 h-2 bg-white rounded-full"></div>
-						<div className="absolute top-2/3 right-1/3 w-2 h-2 bg-white rounded-full"></div>
-						<div className="absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full"></div>
-						<div className="absolute top-1/4 right-1/2 w-2 h-2 bg-white rounded-full"></div>
-					</div>
-					<div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-					<div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
-				</div>
-
-				{/* Curved bottom */}
-				<div className="absolute bottom-0 left-0 w-full">
-					<svg
-						className="w-full h-24"
-						viewBox="0 0 1200 120"
-						preserveAspectRatio="none">
-						<path
-							d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z"
-							fill="rgb(249 250 251)"
-						/>
-					</svg>
-				</div>
-
-				<div className="relative max-w-7xl mx-auto px-4 py-24">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-						<div className="space-y-6">
-							<div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium">
-								🏥 Healthcare Excellence Since 1947
-							</div>
-							<h1 className="text-6xl font-bold leading-tight">
-								About
-								<span className="block text-yellow-400">DIVITH LABS</span>
-							</h1>
-							<p className="text-xl text-blue-100 leading-relaxed max-w-lg">
-								Pioneering diagnostic excellence with cutting-edge technology
-								and compassionate care for over 75 years.
-							</p>
-							<div className="grid grid-cols-3 gap-6 pt-6">
-								<div className="text-center">
-									<div className="text-3xl font-bold text-yellow-400">75+</div>
-									<div className="text-sm text-blue-200">Years Legacy</div>
-								</div>
-								<div className="text-center">
-									<div className="text-3xl font-bold text-yellow-400">
-										4000+
-									</div>
-									<div className="text-sm text-blue-200">Tests Available</div>
-								</div>
-								<div className="text-center">
-									<div className="text-3xl font-bold text-yellow-400">200+</div>
-									<div className="text-sm text-blue-200">Locations</div>
-								</div>
-							</div>
-						</div>
-						<div className="relative">
-							<div className="relative z-10">
-								<img
-									src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
-									alt="Healthcare Professional"
-									className="rounded-2xl shadow-2xl w-full"
-								/>
-							</div>
-							<div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-orange-400/20 rounded-2xl blur-3xl"></div>
-						</div>
-					</div>
+			{/* Page Header */}
+			<div className="bg-white border-b border-gray-200">
+				<div className="max-w-7xl mx-auto px-4 py-8">
+					<h1 className="text-4xl font-bold text-gray-900 mb-2">About DIVITH LABS</h1>
+					<p className="text-lg text-gray-600">Pioneering diagnostic excellence with cutting-edge technology and compassionate care for over 75 years.</p>
 				</div>
 			</div>
 
 			{/* Breadcrumb */}
-			<Breadcrumb
+			{/* <Breadcrumb
 				items={[
 					{ label: "Home", href: "/" },
 					{ label: "About Us", isActive: true },
 				]}
-			/>
+			/> */}
 
 			{/* Vision & Mission Section */}
 			<div className="bg-white py-16">
@@ -159,7 +90,7 @@ const About = () => {
 						<div className="relative">
 							<div className="bg-white bg-opacity-20 rounded-full p-8 max-w-md mx-auto">
 								<img
-									src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80"
+									src="https://images.pexels.com/photos/3985165/pexels-photo-3985165.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
 									alt="Healthcare Journey"
 									className="rounded-full w-full h-full object-cover"
 								/>
@@ -234,7 +165,7 @@ const About = () => {
 						<div className="text-center">
 							<div className="bg-blue-50 p-8 rounded-lg mb-4">
 								<img
-									src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+									src="https://images.pexels.com/photos/7089391/pexels-photo-7089391.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
 									alt="Customer First"
 									className="w-20 h-20 mx-auto rounded-lg object-cover mb-4"
 								/>
@@ -247,7 +178,7 @@ const About = () => {
 						<div className="text-center">
 							<div className="bg-blue-50 p-8 rounded-lg mb-4">
 								<img
-									src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+									src="https://images.pexels.com/photos/4167544/pexels-photo-4167544.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
 									alt="Docs & Integrity"
 									className="w-20 h-20 mx-auto rounded-lg object-cover mb-4"
 								/>
@@ -260,7 +191,7 @@ const About = () => {
 						<div className="text-center">
 							<div className="bg-blue-50 p-8 rounded-lg mb-4">
 								<img
-									src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+									src="https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
 									alt="Quality"
 									className="w-20 h-20 mx-auto rounded-lg object-cover mb-4"
 								/>
@@ -271,7 +202,7 @@ const About = () => {
 						<div className="text-center">
 							<div className="bg-blue-50 p-8 rounded-lg mb-4">
 								<img
-									src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+									src="https://images.pexels.com/photos/8940748/pexels-photo-8940748.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
 									alt="Accountability"
 									className="w-20 h-20 mx-auto rounded-lg object-cover mb-4"
 								/>
@@ -286,7 +217,7 @@ const About = () => {
 						<div className="text-center">
 							<div className="bg-blue-50 p-8 rounded-lg mb-4">
 								<img
-									src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+									src="https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
 									alt="Comfort & Convenience"
 									className="w-20 h-20 mx-auto rounded-lg object-cover mb-4"
 								/>
@@ -406,7 +337,7 @@ const About = () => {
 
 						<div>
 							<img
-								src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+								src="https://images.pexels.com/photos/7089391/pexels-photo-7089391.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop"
 								alt="Our Network"
 								className="rounded-lg shadow-lg w-full"
 							/>
@@ -504,7 +435,7 @@ const About = () => {
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 						<div className="text-center">
 							<img
-								src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+								src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
 								alt="Dr. Rajiv Sharma"
 								className="w-full h-64 rounded-lg mx-auto mb-4 object-cover"
 							/>
@@ -518,7 +449,7 @@ const About = () => {
 
 						<div className="text-center">
 							<img
-								src="https://images.unsplash.com/photo-1594824019862-a9cf12b1b4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+								src="https://images.pexels.com/photos/7447115/pexels-photo-7447115.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
 								alt="Dr. Sunita Singh"
 								className="w-full h-64 rounded-lg mx-auto mb-4 object-cover"
 							/>
@@ -530,7 +461,7 @@ const About = () => {
 
 						<div className="text-center">
 							<img
-								src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+								src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
 								alt="Rajeev Raj Sharma"
 								className="w-full h-64 rounded-lg mx-auto mb-4 object-cover"
 							/>
@@ -542,7 +473,7 @@ const About = () => {
 
 						<div className="text-center">
 							<img
-								src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+								src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
 								alt="Dr Malkeet Kaul"
 								className="w-full h-64 rounded-lg mx-auto mb-4 object-cover"
 							/>
@@ -572,7 +503,7 @@ const About = () => {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
 							<img
-								src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+								src="https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
 								alt="Corporate Social Responsibility"
 								className="w-full h-64 object-cover"
 							/>
@@ -591,7 +522,7 @@ const About = () => {
 
 						<div className="relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
 							<img
-								src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+								src="https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
 								alt="Career at Lal PatLabs"
 								className="w-full h-64 object-cover"
 							/>

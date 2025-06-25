@@ -46,92 +46,92 @@ const SearchByHealthConcerns = () => {
 		{
 			id: 1,
 			name: "Heart",
-			icon: <FaHeart className="text-6xl text-blue-600" />,
+			icon: <FaHeart className="text-3xl text-blue-600" />,
 			category: "Lifestyle Disorder",
 		},
 		{
 			id: 2,
 			name: "Lungs",
-			icon: <FaLungs className="text-6xl text-blue-600" />,
+			icon: <FaLungs className="text-3xl text-blue-600" />,
 			category: "Lifestyle Disorder",
 		},
 		{
 			id: 3,
 			name: "CBC",
-			icon: <FaVial className="text-6xl text-blue-600" />,
+			icon: <FaVial className="text-3xl text-blue-600" />,
 			category: "Lifestyle Disorder",
 		},
 		{
 			id: 4,
 			name: "Vitamin D",
-			icon: <FaPills className="text-6xl text-blue-600" />,
+			icon: <FaPills className="text-3xl text-blue-600" />,
 			category: "Lifestyle Disorder",
 		},
 		{
 			id: 5,
 			name: "Infertility",
-			icon: <FaShieldAlt className="text-6xl text-blue-600" />,
+			icon: <FaShieldAlt className="text-3xl text-blue-600" />,
 			category: "Lifestyle Disorder",
 		},
 		{
 			id: 6,
 			name: "Allergy",
-			icon: <FaVial className="text-6xl text-yellow-500" />,
+			icon: <FaVial className="text-3xl text-yellow-500" />,
 			category: "Lifestyle Disorder",
 		},
 		// Condition
 		{
 			id: 7,
 			name: "Diabetes",
-			icon: <FaShieldAlt className="text-6xl text-yellow-500" />,
+			icon: <FaShieldAlt className="text-3xl text-yellow-500" />,
 			category: "Condition",
 		},
 		{
 			id: 8,
 			name: "Thyroid",
-			icon: <FaShieldAlt className="text-6xl text-yellow-500" />,
+			icon: <FaShieldAlt className="text-3xl text-yellow-500" />,
 			category: "Condition",
 		},
 		{
 			id: 9,
 			name: "Kidney",
-			icon: <FaTint className="text-6xl text-blue-600" />,
+			icon: <FaTint className="text-3xl text-blue-600" />,
 			category: "Condition",
 		},
 		{
 			id: 10,
 			name: "Fever",
-			icon: <FaThermometerHalf className="text-6xl text-yellow-500" />,
+			icon: <FaThermometerHalf className="text-3xl text-yellow-500" />,
 			category: "Condition",
 		},
 		{
 			id: 11,
 			name: "Liver",
-			icon: <FaVial className="text-6xl text-yellow-500" />,
+			icon: <FaVial className="text-3xl text-yellow-500" />,
 			category: "Condition",
 		},
 		{
 			id: 12,
 			name: "HIV/AIDS",
-			icon: <FaShieldAlt className="text-6xl text-blue-600" />,
+			icon: <FaShieldAlt className="text-3xl text-blue-600" />,
 			category: "Condition",
 		},
 		{
 			id: 13,
 			name: "Hypertension",
-			icon: <FaHeart className="text-6xl text-yellow-500" />,
+			icon: <FaHeart className="text-3xl text-yellow-500" />,
 			category: "Condition",
 		},
 		{
 			id: 14,
 			name: "Anemia",
-			icon: <FaTint className="text-6xl text-yellow-500" />,
+			icon: <FaTint className="text-3xl text-yellow-500" />,
 			category: "Condition",
 		},
 		{
 			id: 15,
 			name: "Arthritis",
-			icon: <FaShieldAlt className="text-6xl text-yellow-500" />,
+			icon: <FaShieldAlt className="text-3xl text-yellow-500" />,
 			category: "Condition",
 		},
 	];
@@ -177,7 +177,7 @@ const SearchByHealthConcerns = () => {
 					id: `letter-${index}`,
 					name: letter,
 					icon: (
-						<span className="text-3xl font-bold text-blue-600">{letter}</span>
+						<span className="text-2xl font-bold text-blue-600">{letter}</span>
 					),
 					category: "Alphabet",
 					isAlphabet: true,
@@ -195,17 +195,17 @@ const SearchByHealthConcerns = () => {
 			  );
 
 	return (
-		<section className="py-16 bg-white">
+		<section className="py-8 bg-white">
 			<div className="max-w-7xl mx-auto px-4">
 				{/* Section Header */}
-				<div className="mb-12">
-					<h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+				<div className="mb-8">
+					<h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
 						Search by Health Concerns
 					</h2>
 				</div>
 
 				{/* Search and Filters */}
-				<div className="flex flex-col lg:flex-row gap-4 mb-12 lg:items-center lg:justify-between">
+				<div className="flex flex-col lg:flex-row gap-4 mb-8 lg:items-center lg:justify-between">
 					{/* Search Bar */}
 					<div className="relative lg:max-w-md lg:flex-shrink-0">
 						<input
@@ -213,10 +213,10 @@ const SearchByHealthConcerns = () => {
 							placeholder="Search Test"
 							value={searchQuery}
 							onChange={(e) => setSearchQuery(e.target.value)}
-							className="w-full pl-4 pr-12 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-600 focus:outline-none transition-colors text-gray-700 placeholder-gray-500"
+							className="w-full pl-4 pr-12 py-2 border-2 border-gray-200 rounded-xl focus:border-blue-600 focus:outline-none transition-colors text-gray-700 placeholder-gray-500"
 						/>
 						<button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-yellow-400 p-2 rounded-lg hover:bg-yellow-500 transition-colors">
-							<FaSearch className="text-gray-900" />
+							<FaSearch className="text-gray-900 text-sm" />
 						</button>
 					</div>
 
@@ -226,7 +226,7 @@ const SearchByHealthConcerns = () => {
 						<div className="lg:hidden relative" ref={filterDropdownRef}>
 							<button
 								onClick={() => setIsFilterDropdownOpen(!isFilterDropdownOpen)}
-								className="w-full flex items-center justify-between px-4 py-3 bg-blue-100 border border-blue-200 rounded-xl text-blue-700 font-medium">
+								className="w-full flex items-center justify-between px-4 py-2 bg-blue-100 border border-blue-200 rounded-xl text-blue-700 font-medium">
 								<span>{activeFilter}</span>
 								{isFilterDropdownOpen ? (
 									<FaChevronUp className="text-blue-600" />
@@ -246,7 +246,7 @@ const SearchByHealthConcerns = () => {
 												setCurrentPage(0);
 												setIsFilterDropdownOpen(false);
 											}}
-											className={`w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors first:rounded-t-xl last:rounded-b-xl ${
+											className={`w-full text-left px-4 py-2 hover:bg-gray-50 transition-colors first:rounded-t-xl last:rounded-b-xl ${
 												activeFilter === filter
 													? "bg-blue-50 text-blue-600 font-medium"
 													: "text-gray-700"
@@ -259,7 +259,7 @@ const SearchByHealthConcerns = () => {
 						</div>
 
 						{/* Desktop Filter Buttons - Horizontal layout like image */}
-						<div className="hidden lg:flex gap-3">
+						<div className="hidden lg:flex gap-2">
 							{filters.map((filter) => (
 								<button
 									key={filter}
@@ -267,7 +267,7 @@ const SearchByHealthConcerns = () => {
 										setActiveFilter(filter);
 										setCurrentPage(0);
 									}}
-									className={`px-6 py-3 rounded-full font-medium transition-all whitespace-nowrap ${
+									className={`px-4 py-2 rounded-full font-medium transition-all whitespace-nowrap text-sm ${
 										activeFilter === filter
 											? "bg-blue-600 text-white"
 											: "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
@@ -280,7 +280,7 @@ const SearchByHealthConcerns = () => {
 						{/* View All Button */}
 						<Link
 							to="/all-concerns"
-							className="text-blue-600 hover:text-blue-800 font-medium text-lg underline whitespace-nowrap">
+							className="text-blue-600 hover:text-blue-800 font-medium underline whitespace-nowrap text-sm">
 							View All
 						</Link>
 					</div>
@@ -289,15 +289,15 @@ const SearchByHealthConcerns = () => {
 				{/* Health Concerns Grid */}
 				{activeFilter === "Alphabet" ? (
 					/* Alphabet Grid - Smaller, compact layout */
-					<div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-13 gap-6 mb-8">
+					<div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-13 gap-4 mb-6">
 						{currentItems.map((concern) => (
 							<Link
 								key={concern.id}
 								to={`/lab-tests/${concern.name.toLowerCase()}`}
 								className="group">
-								<div className="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-300">
-									<div className="w-12 h-12 flex items-center justify-center mb-2">
-										<span className="text-2xl font-bold text-blue-600 group-hover:text-blue-800 transition-colors">
+								<div className="flex flex-col items-center p-3 hover:scale-105 transition-transform duration-300">
+									<div className="w-10 h-10 flex items-center justify-center mb-2">
+										<span className="text-xl font-bold text-blue-600 group-hover:text-blue-800 transition-colors">
 											{concern.name}
 										</span>
 									</div>
@@ -307,7 +307,7 @@ const SearchByHealthConcerns = () => {
 					</div>
 				) : (
 					/* Health Concerns - Large circular icons with scrolling */
-					<div className="mb-8">
+					<div className="mb-6">
 						<div
 							className={`${
 								activeFilter === "Condition"
@@ -317,21 +317,21 @@ const SearchByHealthConcerns = () => {
 							<div
 								className={`${
 									activeFilter === "Condition"
-										? "flex gap-8 min-w-max"
-										: "flex gap-8 md:grid md:grid-cols-3 lg:grid-cols-6 min-w-max md:min-w-0"
+										? "flex gap-6 min-w-max"
+										: "flex gap-6 md:grid md:grid-cols-3 lg:grid-cols-6 min-w-max md:min-w-0"
 								}`}>
 								{currentItems.map((concern) => (
 									<Link
 										key={concern.id}
 										to={`/concern/${concern.id}`}
 										className="group flex-shrink-0">
-										<div className="flex flex-col items-center p-6 hover:scale-105 transition-transform duration-300">
+										<div className="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-300">
 											{/* Large Icon Circle - Light gray background like in image */}
-											<div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mb-4 group-hover:bg-gray-300 transition-colors">
+											<div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center mb-3 group-hover:bg-gray-300 transition-colors">
 												{concern.icon}
 											</div>
 											{/* Label */}
-											<span className="text-lg font-medium text-gray-700 text-center group-hover:text-blue-600 transition-colors whitespace-nowrap">
+											<span className="text-sm font-medium text-gray-700 text-center group-hover:text-blue-600 transition-colors whitespace-nowrap">
 												{concern.name}
 											</span>
 										</div>

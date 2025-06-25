@@ -4,84 +4,45 @@ import Breadcrumb from "../components/Breadcrumb";
 const Career = () => {
 	return (
 		<div className="min-h-screen bg-gray-50">
-			{/* Hero Section */}
-			<div className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white overflow-hidden">
-				{/* Background Pattern */}
-				<div className="absolute inset-0">
-					<div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent"></div>
-					<div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-					<div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
-					<div className="absolute inset-0 opacity-10">
-						<div className="absolute top-10 left-10 w-4 h-4 bg-white rounded-full"></div>
-						<div className="absolute top-20 right-20 w-2 h-2 bg-white rounded-full"></div>
-						<div className="absolute bottom-20 left-20 w-3 h-3 bg-white rounded-full"></div>
-						<div className="absolute bottom-10 right-10 w-2 h-2 bg-white rounded-full"></div>
-						<div className="absolute top-1/2 left-1/4 w-2 h-2 bg-white rounded-full"></div>
-						<div className="absolute top-1/3 right-1/3 w-3 h-3 bg-white rounded-full"></div>
+			{/* Compact Career Banner */}
+			<div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+				<div className="max-w-7xl mx-auto px-4 py-8">
+					<div className="flex items-center justify-between">
+						<div>
+							<div className="flex items-center gap-2 mb-2">
+								<span className="text-yellow-400">🚀</span>
+								<span className="text-sm font-medium">Join Our Team</span>
+							</div>
+							<h1 className="text-3xl font-bold mb-2">Find the right opportunity for you at DIVITH LABS</h1>
+							<p className="text-blue-100">Be part of India's leading diagnostic network and make a difference in millions of lives every day.</p>
+						</div>
+						<div className="hidden lg:flex gap-3">
+							<button className="bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+								View Open Positions
+							</button>
+							<button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+								Learn About Culture
+							</button>
+						</div>
 					</div>
-				</div>
-
-				{/* Curved bottom */}
-				<div className="absolute bottom-0 left-0 w-full">
-					<svg
-						className="w-full h-24"
-						viewBox="0 0 1200 120"
-						preserveAspectRatio="none">
-						<path
-							d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z"
-							fill="rgb(249 250 251)"
-						/>
-					</svg>
-				</div>
-
-				<div className="relative max-w-7xl mx-auto px-4 py-24">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-						<div className="space-y-6">
-							<div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium">
-								🚀 Join Our Team
-							</div>
-							<h1 className="text-5xl md:text-6xl font-bold leading-tight">
-								Find the right
-								<span className="block text-yellow-400">opportunity</span>
-								for you at
-							</h1>
-							<div className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-2xl inline-block transform rotate-1 shadow-2xl border border-white/20">
-								<h2 className="text-3xl font-bold">DIVITH LABS</h2>
-							</div>
-							<p className="text-xl text-blue-100 leading-relaxed max-w-lg">
-								Be part of India's leading diagnostic network and make a
-								difference in millions of lives every day.
-							</p>
-							<div className="flex flex-col sm:flex-row gap-4">
-								<button className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-300 transition-colors shadow-lg">
-									View Open Positions
-								</button>
-								<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-900 transition-colors">
-									Learn About Culture
-								</button>
-							</div>
-						</div>
-						<div className="relative">
-							<div className="relative z-10">
-								<img
-									src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
-									alt="Healthcare Professional"
-									className="rounded-2xl shadow-2xl w-full"
-								/>
-							</div>
-							<div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-orange-400/20 rounded-2xl blur-3xl"></div>
-						</div>
+					<div className="flex lg:hidden gap-3 mt-4">
+						<button className="bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+							View Open Positions
+						</button>
+						<button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+							Learn About Culture
+						</button>
 					</div>
 				</div>
 			</div>
 
 			{/* Breadcrumb */}
-			<Breadcrumb
+			{/* <Breadcrumb
 				items={[
 					{ label: "Home", href: "/" },
 					{ label: "Career", isActive: true },
 				]}
-			/>
+			/> */}
 
 			{/* Employee Testimonials */}
 			<div className="bg-white py-16">
@@ -94,7 +55,7 @@ const Career = () => {
 						<div className="bg-gray-50 p-6 rounded-lg">
 							<div className="flex items-center mb-4">
 								<img
-									src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+									src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
 									alt="Bhuvanesh Pathak"
 									className="w-12 h-12 rounded-full object-cover mr-4"
 								/>
@@ -119,7 +80,7 @@ const Career = () => {
 						<div className="bg-gray-50 p-6 rounded-lg">
 							<div className="flex items-center mb-4">
 								<img
-									src="https://images.unsplash.com/photo-1594824019862-a9cf12b1b4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+									src="https://images.pexels.com/photos/7447115/pexels-photo-7447115.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
 									alt="Dr. Sukrithya Bansal"
 									className="w-12 h-12 rounded-full object-cover mr-4"
 								/>
@@ -146,7 +107,7 @@ const Career = () => {
 						<div className="bg-gray-50 p-6 rounded-lg">
 							<div className="flex items-center mb-4">
 								<img
-									src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+									src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
 									alt="Dr. Kashmiri Lal Sharma"
 									className="w-12 h-12 rounded-full object-cover mr-4"
 								/>
@@ -306,7 +267,7 @@ const Career = () => {
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 						<div className="relative overflow-hidden rounded-lg shadow-lg">
 							<img
-								src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+								src="https://images.pexels.com/photos/7089391/pexels-photo-7089391.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
 								alt="Team Meeting"
 								className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
 							/>
@@ -314,7 +275,7 @@ const Career = () => {
 
 						<div className="relative overflow-hidden rounded-lg shadow-lg">
 							<img
-								src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+								src="https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
 								alt="Laboratory Work"
 								className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
 							/>
@@ -322,7 +283,7 @@ const Career = () => {
 
 						<div className="relative overflow-hidden rounded-lg shadow-lg">
 							<img
-								src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+								src="https://images.pexels.com/photos/8940748/pexels-photo-8940748.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
 								alt="Healthcare Professionals"
 								className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
 							/>
@@ -473,7 +434,7 @@ const Career = () => {
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 						<div className="relative">
 							<img
-								src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+								src="https://images.pexels.com/photos/5412081/pexels-photo-5412081.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
 								alt="Job Opportunities"
 								className="rounded-lg shadow-lg w-full"
 							/>
